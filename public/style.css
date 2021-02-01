@@ -1,0 +1,201 @@
+h1{
+    color: black;
+    margin:15px;
+}
+form{
+    background-color: #f1f3f4;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 25px solid white;
+}
+body{
+    background-color: #fafbfc;
+    font-family: sans-serif;
+    margin: 0;
+}
+#open-search{
+    visibility: hidden;
+        clear: both;
+        display: none;
+}
+#matching-jobs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.job{
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.15);
+}
+.job-header{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;    
+    margin-bottom: 15px;
+    
+}
+
+.job-title{
+    color: blue;
+    font-size:2.8vh;    
+    justify-self: start;
+    align-self: center;
+}
+
+.job-location{
+    color: black;
+    font-size:2.3vh;
+}
+.job-header-right{
+    justify-self: end;
+    align-self: center;
+}
+.job-description{
+    visibility: hidden;
+    display: none;
+}
+
+#search-jobs-button{
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(105, 170, 105);
+}
+.quick-apply{
+    display: inline;
+    border-radius: 10px;
+    color: rgb(105, 170, 105);
+    background-color: white;
+    padding: 2px;
+    border: 2px solid rgb(240, 240, 240);
+}
+
+.quick-apply:hover{
+    background-color: rgb(240, 240, 240);
+    transition: 0.2s;
+}
+.fas{
+    color: rgb(247, 247, 102);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.0); /* w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.355);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: white;
+    height: 50%;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+  @media only screen and (max-width: 450px) {  
+
+    .job{
+        width: 90%;
+    }
+    .quick-apply {    
+        position: absolute;
+        left: 40%;
+        margin-top: 40px;
+    }
+    form{
+        background-color: white;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 45px solid white;
+        box-shadow: 0px 7px 5px -5px rgb(0 0 0 / 25%);
+    }
+    #keyword{
+        width: 88%;
+        border: 1px solid transparent;
+        background: #f6f7f8;
+        border-radius: 2em;
+        display: block;
+        float: none;
+        margin-right: 3.3em;
+        margin-bottom: 10px;
+        min-height: 38px;
+        padding-left: 25px;
+        visibility: hidden;
+        clear: both;
+        display: none;
+    }
+    #location{
+        width: 88%;
+        border: 1px solid transparent;
+        background: #f6f7f8;
+        border-radius: 2em;
+        display: block;
+        float: none;
+        margin-right: 3.3em;
+        margin-bottom: 0;
+        min-height: 38px;
+        padding-left: 25px;
+        visibility: hidden;
+        clear: both;
+        display: none;
+    }
+    #search-jobs-button{
+        visibility: hidden;
+        clear: both;
+        display: none;
+        float: right;
+        margin-right: 35px;
+        margin-top: 15px;
+    }
+
+    #open-search{
+        width: 88%;
+        border: 1px solid transparent;
+        background: #f6f7f8;
+        border-radius: 2em;
+        display: block;
+        float: none;
+        margin-right: 3.3em;
+        margin-bottom: 0;
+        min-height: 38px;
+        padding-left: 25px;
+        padding-top: 10px;
+        visibility: visible;
+    }
+}

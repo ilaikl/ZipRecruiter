@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ZipRecruiter</title>
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+
+<body>
+<h1>ZipRecruiter</h1>
+
+<form id="search-jobs-form" action="/send/{{.Title}}" method="POST">
+    <div id="open-search" onclick="openSearch(this)">Job in Location</div>
+    <input type="text" id="keyword" name="keyword" placeholder="Job title or keyword">  
+    <input type="text" id="location" name="location" placeholder="Location"> 
+    <input type="submit" id="search-jobs-button" value="Search Jobs">
+</form>
+
+<div id="matching-jobs">
+    {{range .Jobs}}
+            <div class="job">
+                <div class="job-header">
+                    <a class="job-title" onclick="openModal(this)">{{.Title}}<span class="job-description">{{.Description}}</span></a> 
+                    <div class="job-header-right">
+                        <button class="quick-apply">Quick Apply</button>
+                        <i class="far fa-star" onclick="saveJob(this)" data-id="{{.ID}}"></i>
+                    </div>
+                </div>
+                <span class="job-location">{{.Location}}</span>
+                
+                  
+            </div>
+    {{end}}
+</div>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modal-description"></p>
+    </div>
+  
+  </div>
+
+<script src="/public/main.js"></script>
+</body>
+</html>
