@@ -13,5 +13,6 @@ go build main.go
 ./main
 ```
 
-then open http://localhost:8080/view/test
-where 'test' simulates a user.
+then open: http://localhost:8080/view/test
+
+('test' simulates a user's path)
