@@ -1,9 +1,17 @@
 # ZipRecruiter
 
 ## Setup
-To run this project, clone this into a golang environment directory, install it locally by running:
+To run this project, clone this into a golang environment directory, or run:
+```
+go get https://github.com/ilaikl/ZipRecruiter
+```
+
+install locally and run the server:
 
 ```
 go build main.go
 ./main
 ```
+
+then open http://localhost:8080/view/test
+where 'test' simulates a user.
