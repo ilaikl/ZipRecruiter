@@ -12,13 +12,14 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 function openModal(jobTitleElement) {
-    document.getElementById("modal-description").innerHTML = jobTitleElement.childNodes[1].innerHTML
+    document.getElementById("modal-description").innerHTML = jobTitleElement.childNodes[3].innerHTML
     modal.style.display = "block";
 }
 let isOpenSearch=false;
 function openSearch(d) {
     isOpenSearch=true;
-    document.getElementById("matching-jobs").style.top = "-44px";
+    document.getElementById("search-jobs-form").style.borderBottom = "45px solid white";
+    // document.getElementById("matching-jobs").style.top = "-103px";
     document.getElementById("matching-jobs").style.position= "relative"; 
     document.getElementById("matching-jobs").style.zIndex =  "-1";
     document.getElementById("keyword").style.visibility = "visible"
@@ -43,6 +44,7 @@ window.onclick = function (event) {
     }
 
     if (isOpenSearch && event.target != document.getElementById("search-jobs-form") && document.getElementById("open-search").style.visibility == "hidden" && (event.target != document.getElementById("open-search")) && (event.target != document.getElementById("keyword")) && (event.target != document.getElementById("location"))) {
+        document.getElementById("search-jobs-form").attributeStyleMap.clear()
         document.getElementById("matching-jobs").attributeStyleMap.clear()
         document.getElementById("keyword").attributeStyleMap.clear()
         document.getElementById("location").attributeStyleMap.clear()
